@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JEMPU 2026 - EMEF Ezequiel Ruiz</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#004aad,#00a651);
+    color:white;
+    height:100vh;
+    overflow:hidden;
+}
+
+header{
+    text-align:center;
+    padding:20px;
+    background:rgba(0,0,0,.3);
+}
+
+header h1{
+    font-size:3rem;
+}
+
+header h2{
+    font-size:1.5rem;
+}
+
+#relogio{
+    position:absolute;
+    top:20px;
+    right:30px;
+    font-size:2rem;
+    font-weight:bold;
+}
+
+.slide{
+    display:none;
+    padding:20px;
+    height:calc(100vh - 120px);
+}
+
+.slide.active{
+    display:block;
+}
+
+.titulo{
+    text-align:center;
+    font-size:2.5rem;
+    margin-bottom:20px;
+    color:#ffe600;
+}
+
+.tabela{
+    width:100%;
+    border-collapse:collapse;
+    font-size:1.3rem;
+}
+
+.tabela th{
+    background:#004aad;
+    padding:12px;
+}
+
+.tabela td{
+    background:rgba(255,255,255,.15);
+    padding:10px;
+    border-bottom:1px solid rgba(255,255,255,.2);
+}
+
+.destaque{
+    background:#00c853 !important;
+    font-weight:bold;
+}
+
+footer{
+    position:absolute;
+    bottom:10px;
+    width:100%;
+    text-align:center;
+    font-size:1rem;
+}
+</style>
+</head>
+<body>
+
+<div id="relogio"></div>
+
+<header>
+    <h1>🏆 JEMPU 2026</h1>
+    <h2>EMEF EZEQUIEL RUIZ II</h2>
+</header>
+
+<!-- QUARTA -->
+<section class="slide active">
+    <div class="titulo">QUARTA-FEIRA</div>
+
+    <table class="tabela">
+        <tr>
+            <th>Hora</th>
+            <th>Modalidade</th>
+            <th>Jogo</th>
+        </tr>
+
+        <tr class="destaque">
+            <td>13h50</td>
+            <td>Queimada</td>
+            <td>Ezequiel Ruiz x Benedito Gomes</td>
+        </tr>
+
+        <tr class="destaque">
+            <td>14h10</td>
+            <td>Queimada</td>
+            <td>Ezequiel Ruiz x São Fco Lago Preto</td>
+        </tr>
+
+        <tr class="destaque">
+            <td>15h00</td>
+            <td>Futsal</td>
+            <td>Ezequiel Ruiz x Adelina Menezes</td>
+        </tr>
+
+        <tr class="destaque">
+            <td>15h00</td>
+            <td>Futebol Campo</td>
+            <td>José de Melo x Ezequiel Ruiz</td>
+        </tr>
+    </table>
+</section>
+
+<!-- QUINTA -->
+<section class="slide">
+    <div class="titulo">QUINTA-FEIRA</div>
+
+    <table class="tabela">
+        <tr>
+            <th>Hora</th>
+            <th>Modalidade</th>
+            <th>Jogo</th>
+        </tr>
+
+        <tr>
+            <td>Manhã</td>
+            <td>Atletismo</td>
+            <td>Programação Especial</td>
+        </tr>
+
+        <tr class="destaque">
+            <td>13h20</td>
+            <td>Futsal</td>
+            <td>Ezequiel Ruiz x Benedito Gomes</td>
+        </tr>
+
+        <tr class="destaque">
+            <td>13h40</td>
+            <td>Queimada</td>
+            <td>Adelina Menezes x Ezequiel Ruiz</td>
+        </tr>
+
+        <tr class="destaque">
+            <td>14h10</td>
+            <td>Queimada</td>
+            <td>Ezequiel Ruiz x Benedito Gomes</td>
+        </tr>
+
+        <tr class="destaque">
+            <td>15h20</td>
+            <td>Futebol Campo</td>
+            <td>Mário D'Almeida x Ezequiel Ruiz</td>
+        </tr>
+    </table>
+</section>
+
+<!-- SEXTA -->
+<section class="slide">
+    <div class="titulo">SEXTA-FEIRA</div>
+
+    <table class="tabela">
+        <tr>
+            <th>Hora</th>
+            <th>Modalidade</th>
+            <th>Jogo</th>
+        </tr>
+
+        <tr class="destaque">
+            <td>08h00</td>
+            <td>Futebol Campo</td>
+            <td>Ezequiel Ruiz x Adelina Menezes</td>
+        </tr>
+
+        <tr class="destaque">
+            <td>08h40</td>
+            <td>Queimada</td>
+            <td>José de Melo x Ezequiel Ruiz</td>
+        </tr>
+
+        <tr class="destaque">
+            <td>09h00</td>
+            <td>Queimada</td>
+            <td>José de Melo x Ezequiel Ruiz</td>
+        </tr>
+
+        <tr class="destaque">
+            <td>09h10</td>
+            <td>Queimada</td>
+            <td>Adelina Menezes x Ezequiel Ruiz</td>
+        </tr>
+
+        <tr class="destaque">
+            <td>13h00</td>
+            <td>Futsal</td>
+            <td>Adelina Menezes x Ezequiel Ruiz</td>
+        </tr>
+    </table>
+</section>
+
+<footer>
+A educação começa em casa, a escola lapida.
+</footer>
+
+<script>
+function atualizarRelogio(){
+    const agora = new Date();
+    document.getElementById('relogio').innerHTML =
+        agora.toLocaleTimeString('pt-BR');
+}
+setInterval(atualizarRelogio,1000);
+atualizarRelogio();
+
+let atual=0;
+const slides=document.querySelectorAll('.slide');
+
+setInterval(()=>{
+    slides[atual].classList.remove('active');
+    atual=(atual+1)%slides.length;
+    slides[atual].classList.add('active');
+},10000);
+</script>
+
+</body>
+</html>
